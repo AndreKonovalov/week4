@@ -1,5 +1,5 @@
 const { Server } = require('http');
-const finalhandler = require(finalhandler);
+const finalhandler = require('finalhandler');
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
