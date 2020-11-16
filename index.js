@@ -20,7 +20,7 @@ const s = Server((req, res) => {
     req.on('data', d => (buffer += d));
     req.on('end', () => {
       jobj['x-body'] = buffer;
-      let strj =  jobj.stringify();
+      let strj =  JSON.stringify(jobj);
       console.log('strj = ' + strj + '\n');
       res.writeHead(200, { 'Contente-Type': 'application/json; charset=utf-8', ...CORS });
       res.end(strj);
