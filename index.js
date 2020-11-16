@@ -13,7 +13,7 @@ const s = Server((req, res) => {
   if(req.url === '/result4/') {
     let jobj = {
       message: "id319887435",
-      'x-result': req.headers['x-test'];
+      'x-result': req.headers['x-test']
     };
 	
     let buffer = '';
