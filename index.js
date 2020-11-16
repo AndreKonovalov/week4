@@ -29,6 +29,8 @@ const s = Server((req, res) => {
     return finalhandler(req, res);
   }
 });
+
+s.listen(4321);
+console.log('port = ' + process.env.PORT + '\n')
 console.log('adr ' + s.address() + '\n');
 console.log('prt ' + s.address().port + '\n');
-s.listen(process.env.PORT, console.log('port = ' + process.env.PORT + '\n'));
