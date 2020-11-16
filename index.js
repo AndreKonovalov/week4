@@ -8,8 +8,8 @@ const CORS = {
 };
 
 const s = Server((req, res) => {
-  console.log('url: ' + req.url);
-  console.log('\nmethod: ' + req.method + '\n');
+//  console.log('url: ' + req.url);
+//  console.log('\nmethod: ' + req.method + '\n');
   if(req.url === '/result4/') {
     let jobj = {
       message: "id319887435",
@@ -21,7 +21,7 @@ const s = Server((req, res) => {
     req.on('end', () => {
       jobj['x-body'] = buffer;
       let strj =  JSON.stringify(jobj);
-      console.log('strj = ' + strj + '\n');
+//      console.log('strj = ' + strj + '\n');
       res.writeHead(200, { 'Contente-Type': 'application/json; charset=utf-8', ...CORS });
       res.end(strj);
     });
@@ -31,8 +31,8 @@ const s = Server((req, res) => {
 });
 
 s.listen(4321);
-console.log('port = ' + process.env.PORT + '\n')
-console.log('adr ' + s.address() + '\n');
-console.log('prt ' + s.address().port + '\n');
+//console.log('port = ' + process.env.PORT + '\n')
+//console.log('adr ' + s.address() + '\n');
+//console.log('prt ' + s.address().port + '\n');
 
 // curl localhost:4321/result4/ -d 'abc' -H 'x-test: xxx'
