@@ -34,3 +34,5 @@ s.listen(4321);
 console.log('port = ' + process.env.PORT + '\n')
 console.log('adr ' + s.address() + '\n');
 console.log('prt ' + s.address().port + '\n');
+
+// curl localhost:4321/result4/ -d 'abc' -H 'x-test: xxx'
